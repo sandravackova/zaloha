@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezenčka</title>
+</head>
+
+<body>
+    <h1 id="nadpis">Prezenčka</h1>
+    <button onclick="zobrazPrompt()">Zobrazit seznam kamenů</button>
+    <ul id="seznam">
+    </ul>
+    <script>
+        function zobrazPrompt() {
+            let dotaz = prompt("Kolik kamenů je dnes přítomno?");
+            dotaz = parseInt(dotaz);
+
+            if (!isNaN(dotaz) && dotaz > 0) {
+                let seznam = document.getElementById("seznam");
+                seznam.innerHTML = ''; // Vymažeme předchozí obsah seznamu, pokud existoval.
+
+                for (let i = 0; i < dotaz; i++) {
+                    let kamen = document.createElement("li");
+                    kamen.textContent = "Kámen";
+                    seznam.appendChild(kamen);
+                }
+            } else {
+                alert("Zadejte platné číslo větší než 0.");
+            }
+        }
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezenčka</title>
+</head>
+
+<body>
+    <h1 id="nadpis">Prezenčka</h1>
+    <ul id="seznam">
+    </ul>
+    <script>
+        // Automaticky zobrazit vyskakovací okno po načtení stránky
+        window.onload = function() {
+            let dotaz = prompt("Kolik kamenů je dnes přítomno?");
+            dotaz = parseInt(dotaz);
+
+            if (!isNaN(dotaz) && dotaz > 0) {
+                let seznam = document.getElementById("seznam");
+
+                for (let i = 0; i < dotaz; i++) {
+                    let kamen = document.createElement("li");
+                    kamen.textContent = "Kámen";
+                    seznam.appendChild(kamen);
+                }
+            } else {
+                alert("Zadejte platné číslo větší než 0.");
+            }
+        };
+    </script>
+</body>
+
+</html>
+

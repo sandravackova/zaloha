@@ -1,0 +1,48 @@
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Procvičování</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="square"></div>
+        </div>
+        <style>
+            body {
+                background-color: #333;
+            }
+
+            .square {
+                height: 100px;
+                width: 100px;
+                background-color: salmon;
+                border: 1px solid black;
+            }
+        </style>
+
+        <script>
+            let wrapper = document.querySelector(".wrapper")
+
+            for (let i = 0; i < 6; i++) {
+                // document. createElement("nazev prvků")
+                let novyDiv = document.createElement("div")
+
+                // přidání classy square novému prvku
+                novyDiv.classList.add("square")
+
+                // náhodná generace čísel (budou sloužit jako barvy)
+                let r = Math.floor(Math.random() * 255)
+                let g = Math.floor(Math.random() * 255)
+                let b = Math.floor(Math.random() * 255)
+
+                // tzv. template literal - aneb psaní kódu do stringu
+                novyDiv.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+
+                // do divu wrapper přidá nově vytvořený prvrk
+                wrapper.appendChild(novyDiv)
+            }
+        </script>
+    </body>
+</html>

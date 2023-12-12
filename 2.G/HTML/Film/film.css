@@ -1,0 +1,34 @@
+.images{
+    height:400px;
+    width:auto;
+    border: 5px firebrick;
+    border-radius: 5%;
+}
+
+/* pravý alt+B -> { */
+
+.headings{
+    color:orangered;
+}
+
+.li{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:firebrick;
+}
+
+.buttons{
+    background-color: firebrick;
+    color: white;
+    border-color: white;
+}
+#comment-input{
+    height:150px;
+    width: 300px;
+    resize:none;
+}
+
+body{
+    background-color:#facca9;
+}
+/* ˇkdyž pracuju s barvami complementary colors */
+/* kdyz nemam tecku ani hesteg nic upravuju vsechny prvky */

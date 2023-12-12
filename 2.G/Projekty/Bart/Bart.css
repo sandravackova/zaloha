@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+.Tabule{
+    background-color: #008000;
+    display: block;
+    border: 3px solid #8b4513;
+    width: 500px;
+    height: 250px;
+}
+
+.Bart{
+    width: 500px;
+    height: 600px;
+    top: 50px;
+    position: absolute;
+    
+}
+
+.popisky{
+    font-family: "Gloria Hallelujah";
+}

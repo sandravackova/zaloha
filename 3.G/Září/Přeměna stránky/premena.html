@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Druhá verze stránky</title>
+    </head>
+
+    <body>
+        <div class="jedna">
+            <h1 id="nadpis">Škola</h1>
+            <p>Konečně škola, už jsem se nemohla dočkat</p>
+            <img src="foto1.jpg" alt="" id="obr1" /><br />
+            <img src="foto4.jpg" alt="" id="obr4" />
+        </div>
+
+        <div class="dva">
+            <h1 id="nadpis1">Prázdniny</h1>
+            <p>
+                O Prázdninách to bylo, tak skvělé, že jsem již zapoměla na
+                existenci Třebešína
+            </p>
+            <img src="foto2.jpg" alt="" id="obr2" /><br />
+            <img src="foto3.jpg" alt="" id="obr3" />
+        </div>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap");
+
+            * {
+                font-family: "Glass Antiqua", cursive;
+                text-align: center;
+                /* align-items: center */
+            }
+
+            .jedna {
+                position: absolute;
+                top: 2px;
+                left: 180px;
+                display: none;
+            }
+
+            .dva {
+                position: absolute;
+                top: 2px;
+                left: 190px;
+            }
+
+            #obr1 {
+                width: 30%;
+                height: 30%;
+            }
+
+            #obr4 {
+                width: 60px;
+                height: 50px;
+                position: absolute;
+                top: 3%;
+                left: 65%;
+            }
+
+            #obr2 {
+                width: 30%;
+                height: 35%;
+            }
+
+            #obr3 {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: 3%;
+                left: 65.5%;
+            }
+        </style>
+
+        <script>
+            let obr3 = document.querySelector("#obr3")
+            let obr4 = document.querySelector("#obr4")
+            let jedna = document.querySelector(".jedna")
+            let dva = document.querySelector(".dva")
+
+            obr3.addEventListener("click", zmenit)
+            function zmenit() {
+                jedna.style.display = "block"
+                dva.style.display = "none"
+            }
+
+            obr4.addEventListener("click", zpet)
+            function zpet() {
+                jedna.style.display = "none"
+                dva.style.display = "block"
+            }
+        </script>
+    </body>
+</html>

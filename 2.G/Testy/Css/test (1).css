@@ -1,0 +1,144 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffebcd;
+    margin-top: 100px;
+    padding: 0px;
+}
+
+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+}
+
+.hlavni-nadpis{
+    font-size: 4em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black; 
+}
+
+.prvni-nadpis{
+    font-size: 1.3em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding-top: 4%;
+}
+
+.druhy-nadpis{
+    font-size: 1.3em;
+    padding-top: 0%;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.lorem{
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    padding-top: 1%;
+    padding-left: 2%;
+}
+
+.prvni-box{
+    background-color: #b9e6ff;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 250px;
+    height: 350px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.druhy-box{
+    background-color: #b9e6ff;
+    justify-content: center;
+    flex-direction: column;
+    width: 250px;
+    height: 350px;
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.skrt{
+    text-decoration: line-through;
+}
+
+.treti-box{
+    background-color: #b9e6ff;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.green{
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    background-color: #82f9bf;
+    border-radius: 50%;
+    border: 2px solid black;
+    align-self: flex-start;
+    flex-direction: row;
+}
+
+.orange{
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    background-color: #f0972d;
+    border-radius: 50%;    
+    border: 2px solid black;
+    align-self: flex-start;
+    flex-direction: column;
+}
+
+.pink{
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    background-color: #ecc4b3;
+    border-radius: 50%;    
+    border: 2px solid black;
+    align-self: flex-end;
+    flex-direction: row;
+}
+
+.purple{
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    background-color: #976792;
+    border-radius: 50%;
+    border: 2px solid black;
+    align-self: flex-end;
+    flex-direction: column;
+}
+
+.odkaz{
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    border: 2px solid black;
+    font-size: 0.8em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: #fcdca9;
+    position: absolute;
+    top: 57%;
+    right: 47%;
+    padding-top: 5px;
+}

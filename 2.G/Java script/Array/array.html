@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array</title>
+    </head>
+
+    <body>
+        <h1 id="nadpis">Přidej postavy StarWars</h1>
+        <input type="text" id="input" />
+        <h2 id="podnadpis"></h2>
+        <button id="tlacitko">Přidej</button>
+
+        <script>
+            let tlacitko = document.querySelector("#tlacitko")
+            let input = document.querySelector("#input")
+            let podnadpis = document.querySelector("#podnadpis")
+            let nadpis = document.querySelector("#nadpis")
+            let seznam = ["Dart Vader", "Yoda"]
+
+            tlacitko.addEventListener("click", pridejkomponent)
+
+            function pridejkomponent() {
+                podnadpis.innerText = ""
+                for (let i = 0; i < seznam.length; i++) {
+                    podnadpis.innerText += seznam[i] + "\n"
+                }
+            }
+
+            let starWars = ["Darth Vader", "Luke Skywalker", "Obi-Wan Kenobi"]
+
+            starWars.push("Chewie", "Yoda", "Ewok", "Princess Leia")
+
+            starWars.pop() // odebírá poslední hodnotu z arraye
+
+            starWars.shift() // odebírá prvníhodnotu z arraye
+
+            starWars.splice(3, 1) // od jakeho indexu, kolik chceme odebrat
+
+            for (let i = 0; i < starWars.length; i++) {
+                console.log(StarWars[i])
+            }
+        </script>
+    </body>
+</html>

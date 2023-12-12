@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Opakování</title>
+        <style>
+            .wrapper {
+                display: flex;
+                justify-content: center;
+                height: 100vh;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .ctverecek {
+                height: 100px;
+                aspect-ratio: 1/1;
+                border: 2px solid black;
+                margin: 10px;
+            }
+
+            .jedna {
+                background-color: blueviolet;
+                transition: 1s ease;
+            }
+
+            .ctverecek:nth-child(2) {
+                background-color: blue;
+            }
+
+            .wrapper:hover .jedna {
+                background-color: brown;
+                translate: 100% 50%;
+                rotate: 45deg;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="ctverecek jedna"></div>
+
+            <div class="ctverecek"></div>
+
+            <div class="ctverecek"></div>
+        </div>
+    </body>
+</html>

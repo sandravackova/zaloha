@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="sibenice.css" />
+        <title>Šibenice</title>
+    </head>
+
+    <body>
+        <h1 id="nadpis">Zahrajme si šibenici</h1>
+        <input type="text" id="input" />
+        <button id="tlacitko">Hádání</button>
+        <h2 id="podnadpis"></h2>
+        <h3 id="pocitadlo">0</h3>
+        <img src="1.png" alt="" id="obr1" />
+        <img src="2.png" alt="" id="obr2" />
+        <img src="3.png" alt="" id="obr3" />
+        <img src="4.png" alt="" id="obr4" />
+        <img src="5.png" alt="" id="obr5" />
+        <img src="6.png" alt="" id="obr6" />
+        <img src="7.png" alt="" id="obr7" />
+        <img src="8.png" alt="" id="obr8" />
+        <img src="9.png" alt="" id="obr9" />
+        <img src="10.png" alt="" id="obr10" />
+        <img src="11.png" alt="" id="obr11" />
+        <img src="12.png" alt="" id="obr12" />
+        <img src="13.png" alt="" id="obr13" />
+        <img src="14.png" alt="" id="obr14" />
+        <img src="15.png" alt="" id="obr15" />
+
+        <script>
+            let tlacitko = document.querySelector("#tlacitko")
+            let input = document.querySelector("#input")
+            let podnadpis = document.querySelector("#podnadpis")
+            let nadpis = document.querySelector("#nadpis")
+            let pocitadlo = document.querySelector("#pocitadlo")
+            obr1 = document.querySelector("#obr1")
+            obr2 = document.querySelector("#obr2")
+            obr3 = document.querySelector("#obr3")
+            obr4 = document.querySelector("#obr4")
+            obr5 = document.querySelector("#obr5")
+            obr6 = document.querySelector("#obr6")
+            obr7 = document.querySelector("#obr7")
+            obr8 = document.querySelector("#obr8")
+            obr9 = document.querySelector("#obr9")
+            obr10 = document.querySelector("#obr10")
+            obr11 = document.querySelector("#obr11")
+            obr12 = document.querySelector("#obr12")
+            obr13 = document.querySelector("#obr13")
+            obr14 = document.querySelector("#obr14")
+            obr15 = document.querySelector("#obr15")
+
+            let seznamSlov = ["hélium", "difuze", "rezistivita", "plebiscismus"]
+            let slovo =
+                seznamSlov[Math.floor(Math.random() * seznamSlov.length)]
+            console.log(slovo)
+            let odpoved = []
+
+            for (let s = 0; s < slovo.length; s++) {
+                odpoved[s] = "_"
+            }
+            for (let s = 0; s < slovo.length; s++) {
+                podnadpis.innerText += odpoved[s]
+            }
+
+            let pocetPokusu = 0
+            let uhodnuto = false
+
+            // tlacitku pridame interakci
+            tlacitko.addEventListener("click", sibenice)
+            function sibenice() {
+                let pismeno = input.value
+                uhodnuto = false
+                for (let s = 0; s < slovo.length; s++) {
+                    if (pismeno === slovo[s]) {
+                        odpoved[s] = pismeno
+                        uhodnuto = true
+                    }
+                }
+
+                if (uhodnuto === false) {
+                    pocetPokusu++
+                    pocitadlo.innerText = pocetPokusu
+                }
+
+                if (pocetPokusu === 1) {
+                    obr1.style.display = "block"
+                } else if (pocetPokusu === 2) {
+                    obr1.style.display = "none"
+                    obr2.style.display = "block"
+                } else if (pocetPokusu === 3) {
+                    obr2.style.display = "none"
+                    obr3.style.display = "block"
+                } else if (pocetPokusu === 4) {
+                    obr3.style.display = "none"
+                    obr4.style.display = "block"
+                } else if (pocetPokusu === 5) {
+                    obr4.style.display = "none"
+                    obr5.style.display = "block"
+                } else if (pocetPokusu === 6) {
+                    obr5.style.display = "none"
+                    obr6.style.display = "block"
+                } else if (pocetPokusu === 7) {
+                    obr6.style.display = "none"
+                    obr7.style.display = "block"
+                } else if (pocetPokusu === 8) {
+                    obr7.style.display = "none"
+                    obr8.style.display = "block"
+                } else if (pocetPokusu === 9) {
+                    obr8.style.display = "none"
+                    obr9.style.display = "block"
+                } else if (pocetPokusu === 10) {
+                    obr9.style.display = "none"
+                    obr10.style.display = "block"
+                } else if (pocetPokusu === 11) {
+                    obr10.style.display = "none"
+                    obr11.style.display = "block"
+                } else if (pocetPokusu === 12) {
+                    obr11.style.display = "none"
+                    obr12.style.display = "block"
+                } else if (pocetPokusu === 13) {
+                    obr12.style.display = "none"
+                    obr13.style.display = "block"
+                } else if (pocetPokusu === 14) {
+                    obr13.style.display = "none"
+                    obr14.style.display = "block"
+                } else if (pocetPokusu === 15) {
+                    obr14.style.display = "none"
+                    obr15.style.display = "block"
+                }
+
+                podnadpis.innerText = ""
+                for (let s = 0; s < odpoved.length; s++) {
+                    podnadpis.innerText += odpoved[s]
+                }
+            }
+        </script>
+    </body>
+</html>

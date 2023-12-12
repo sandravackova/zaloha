@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.red{
+    background-color: red;
+    color: white;
+}
+
+.blue{
+    background-color: blue;
+    color: white;
+    display: none;
+}
+
+.green{
+    background-color: green;
+    color: white;
+    display: block;
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+}
+
+.spagety{
+    background-color: yellow;
+    display: block;
+    border: 3px solid black;
+    padding: 50px;
+    width: 200px;
+    height: 200px;
+    /* box-sizing: border-box; */
+    /* kdyz dam ctrl a ´  budu to mit vybrane tak to zmenim na poznamku a nazpet */
+}
+
+.kecup{
+    background-color: red;
+    display:inline-block;
+    width: 75%;
+}
+/* ˇpozice absolutní jde přes ně a ignoruje to a relative je sám na sebe ajde před něj a sticky je relativni nez zacneme sjizdet po strance */
+.slunicko{
+    width: 250px;
+    height: 3000px;
+    background-color: yellow;
+    position: relative;
+}
+
+.teletubbies{
+    width: 200px;
+    height: 50px;
+}
+
+.tinky-winky{
+    background-color: purple;
+    position: sticky;
+    left: 30px;
+    top: 30px;
+}
+
+.dipsy{
+    background-color: green;
+}
+
+.la{
+    background-color: red;
+}
+
+
+/* ˇzhora zprava zdola leva jsou souradnice kdyz dame vsechny*/
+/* padding je vypln/vycpavka */
+/* solid ze bude plna a dotted teckovany */
+/* span ma displej inline a div ma blok a kdyz to prohodite bude se to chovat opacne  */
+/* inline block nejde s margin 0 auto ale musi tam byt block */
+/* line height musi byt stejne pixelu jako jsem dala vysku/height */
+/* position relative je lepsi na pracovani s left a td.. */
+/* ˇabsolute vsichni ostatni ten prvek ignoruji a hybe se jak chce a relative je v bloku  */
+/* stycky se pohybuje s tim neni bloku neco jako reklama jezdi po strance */
+

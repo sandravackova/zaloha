@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Uklizení</title>
+        <style>
+            .hlavni {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin: 100px;
+            }
+
+            .domecek {
+                height: 400px;
+                width: 350px;
+                border: 5px solid #bc4a3c;
+            }
+
+            .strecha {
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                border-width: 190px 190px 0 190px;
+                border-color: grey transparent transparent transparent;
+                transform: rotate(180deg);
+            }
+
+            .koste {
+                width: 60px;
+                animation: zametani 3s ease forwards infinite alternate,
+                    rotace 0.5s ease forwards infinite alternate;
+            }
+
+            @keyframes zametani {
+                33% {
+                    translate: 0px 220px;
+                }
+
+                66% {
+                    translate: 300px 220px;
+                }
+
+                100% {
+                    translate: 300px 0px;
+                }
+            }
+
+            @keyframes rotace {
+                33% {
+                    rotate: -20deg;
+                }
+
+                66% {
+                    rotate: 0deg;
+                }
+
+                100% {
+                    rotate: 20deg;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="hlavni">
+            <div class="strecha"></div>
+
+            <div class="domecek">
+                <img class="koste" src="koste.png" alt="" />
+            </div>
+        </div>
+    </body>
+</html>

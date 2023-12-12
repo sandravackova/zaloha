@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="https://api.mapy.cz/loader.js"></script>
+	<script>Loader.load()</script>
+</head>
+
+<body>
+Pamatuji si, jak vytvářet html stránku
+Tady je adresa naší školy.
+Teda teďka mého domova :)
+
+<div id="mapa" style="width:600px; height:400px;"></div>
+	<script type="text/javascript">
+		var stred = SMap.Coords.fromWGS84(14.4002408, 50.0082081)
+		var mapa = new SMap(JAK.gel("mapa"), stred, 17);
+		mapa.addDefaultLayer(SMap.DEF_BASE).enable();
+		mapa.addDefaultControls();	      	      
+</script>
+</body>
+
+</html>

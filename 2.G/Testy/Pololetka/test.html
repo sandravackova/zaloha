@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pololetka</title>
+</head>
+
+<body>
+    <h1 id="nadpis">1. Slovní popelka</h1>
+    <input type="text" id="input" />
+    <button id="tlacitko">Přidej slovo</button>
+    <h2 id="podnadpis">Seznam slov:</h2>
+    <h2 id="podnadpis1"> </h2>
+    <button id="tlacitko1">Zavolej popelku</button>
+    <h3 id="podnadpis2">Krátká slova:</h3>
+    <h4 id="podnadpis5"></h4>
+    <h3 id="podnadpis3">Dlouhá slova</h3><br>
+    <h4 id="podnadpis6"></h4>
+    <h1 id="nadpis">2. Hodnocení</h1>
+    <h3 id="podnadpis2">Jak moc mě bavil tento úkol</h3>
+    <input type="text" id="input1" />
+    <button id="tlacitko2">Hodnocení</button>
+    <h3 id="podnadpis4"></h3>
+
+
+   
+    <script>
+    let tlacitko = document.querySelector("#tlacitko")
+    let tlacitko1 = document.querySelector("#tlacitko1")
+    let tlacitko3 = document.querySelector("#tlacitko2")
+    let input = document.querySelector("#input")
+    let input1 = document.querySelector("#input1")
+    let podnadpis = document.querySelector("#podnadpis")
+    let nadpis = document.querySelector("#nadpis")
+    let podnadpis1 = document.querySelector("#podnadpis1")
+    let podnadpis2 = document.querySelector("#podnadpis2")
+    let podnadpis3 = document.querySelector("#podnadpis3")
+    let podnadpis4 = document.querySelector("#podnadpis4")
+    let podnadpis5 = document.querySelector("#podnadpis5")
+    let podnadpis6 = document.querySelector("#podnadpis6")
+
+
+
+    tlacitko.addEventListener("click", pridejSlovo)
+    function pridejSlovo(){
+        podnadpis.innerText = ""
+        let textInputu = input.value
+        let pridejSlovo = [] 
+        pridejSlovo.push(textInputu)
+        for (let i = 0; i < pridejSlovo.length; i++) {
+            podnadpis1.innerText += pridejSlovo[i] + "\n"
+        }
+    }
+    
+    tlacitko1.addEventListener("click", zavolej)
+    function zavolej(){
+        let zavolej = []
+        for(let i = 0; i < zavolej.length; i++){
+            podnadpis5.innerText += zavolej[i] 
+            console.log(zavolej[i])
+        }
+    }
+
+    tlacitko2.addEventListener("click", pridejHodnoceni)
+    function pridejHodnoceni(){
+        let cislo = input1.value
+        for(let i = 0; i < cislo; i++) {
+            podnadpis4.innerText += "❤️"
+        }
+    }   
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

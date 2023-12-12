@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Gloria+Hallelujah&family=Oswald:wght@300&family=Roboto+Slab:wght@200&family=Roboto:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffebcd;
+    margin: 5px;
+    padding: 0px;
+}
+
+.main-header{
+    font-size: 4em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.první-box{
+    background-color: #b9e6ff;
+    justify-content: flex-start;
+    width: 250px;
+    height: 350px;
+    border: 2px solid black;
+}
+
+.druhý-box{
+    background-color: #b9e6ff;
+    justify-content: center;
+    width: 250px;
+    height: 350px;
+    border: 2px solid black;
+}
+
+.třetí-box{
+    background-color: #b9e6ff;
+    justify-content: flex-end;
+    width: 250px;
+    height: 350px;
+    border: 2px solid black;
+}
+
+.third-header{
+    font-size: 1.3em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.div{
+    width: 250px;
+    height: 350px;
+    border: 2px solid black;
+    background-color: #b9e6ff;
+}
+
+.buttons{
+    border-radius: 1000px;
+    text-align: center;
+    justify-content: center;
+    display: inline-block;
+}
+
+.green{
+    height: 70px;
+    width: 70px;
+    background-color: #82f9bf;
+    display: inline;
+    border-radius: 50%;
+}
+
+.orange{
+    height: 70px;
+    width: 70px;
+    background-color: #f0972d;
+    display: inline;
+    border-radius: 50%;
+}
+
+.pink{
+    height: 70px;
+    width: 70px;
+    background-color: #ecc4b3;
+    display: inline;
+    border-radius: 50%;
+}
+
+.purple{
+    height: 70px;
+    width: 70px;
+    background-color: #976792;
+    display: inline;
+    border-radius: 50%;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prezenčka</title>
+</head>
+
+<body>
+    <h1 id="nadpis">Prezenčka</h1>
+    <ul id="seznam"></ul>
+    
+    <style>
+        html {
+            font-family: monospace;
+        }
+    </style>
+    
+    <script>
+        let dotaz = prompt ("Kolik kamenů je přítomno?")
+        dotaz = parseInt(dotaz)
+        let seznam = document.querySelector("#seznam")
+        
+        if (dotaz > 0){
+            for (let i = 0; i < dotaz; i++) {
+                let kamen = document.createElement("li")
+                kamen.innerText = "Kámen"
+                seznam.appendChild(kamen)
+            } 
+        }
+    </script>
+</body>
+</html>

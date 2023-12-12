@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Gloria+Hallelujah&family=Oswald:wght@300&family=Roboto+Slab:wght@200&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Bitter', serif;
+}
+
+body{
+    margin:0;
+    padding: 0;
+}
+
+header{
+    background-image: url("Pizzerie pozadí.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    position: relative;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 3%;
+    top: 41%;
+}
+
+.nav{
+    font-size: 1.1em;
+    text-align: center;
+    width: 60vw;
+    position: absolute;
+    left: 16%;
+    top: 3%;
+}
+
+.nav li{
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 5%;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.main-header{
+    font-size: 4.5em;
+    color: white;
+    position: absolute;
+    text-align: center;
+    left: 8%;
+    bottom: 45%;
+    text-shadow: 0 0 10px black;
+}
+
+.subheading{
+    color:white;
+    position: absolute;
+    bottom: 8%;
+    left: 3%;
+}
+
+.subheading a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+section{
+    margin: 0 25vw;
+}
+
+section p{
+    text-align: justify;
+}
+
+.map{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+/* em-velikost relativně k jeho parentu */
+/* rem-velikost relativně k default html (default text size =16 px) */
+/* ˇvw-view width */
+/* nav pro cely; nav li pro psani a nav a pro nadpis */
+/* em pro text */
+/* ˇFigma aplikace na webovou stránku */
+/* Unsplash, pixabay */
+/* cover aby se tam vecpal, aby to tam zapadlo */
+/* responzivni web pracuje i na malem zarizeni */
+/* thenounproject stranka na loga */

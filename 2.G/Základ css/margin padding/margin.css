@@ -1,0 +1,28 @@
+.red{
+    background-color: red;
+    color: white;
+}
+
+.blue{
+    background-color: blue;
+    color: white;
+    margin: 5px 20px;
+    padding: 20px;
+    border: 2px solid black;
+}
+/* ˇzhora zprava zdola leva jsou souradnice kdyz dame vsechny*/
+/* padding je vypln/vycpavka */
+/* solid ze bude plna a dotted teckovany */
+
+.green{
+    background-color: green;
+    color: white;
+}
+
+.spagety{
+    background-color: yellow;
+}
+
+.kecup{
+    background-color: red;
+}

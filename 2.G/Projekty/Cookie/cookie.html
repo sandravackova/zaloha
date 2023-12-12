@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cookie</title>
+    </head>
+
+    <body>
+        <h1 id="nadpis">Fortune cookie generator</h1>
+        <button id="tlacitko">Click for your fortune, sorry no cookie</button>
+        <h2 id="podnadpis">
+            You will be rich and famous, but only because of viral video of you
+            falling down a glight of stairs.
+        </h2>
+        <h3 id="podnadpis1">
+            Your future is looking bright, so bright that you might need some
+            sunglasees. And possibly a tanning bed.
+        </h3>
+        <h4 id="podnadpis2">
+            Your future is looking bright, as long as you don´t mind being broke
+            and alone.
+        </h4>
+        <h5 id="podnadpis3">
+            You will be blessed with a long life, filled with annoying people.
+        </h5>
+        <h6 id="podnapis4"></h6>
+        <script>
+            let tlacitko = document.querySelector("#tlacitko")
+            let podnadpis = document.querySelector("#podnadpis")
+            let nadpis = document.querySelector("#nadpis")
+
+            tlacitko.addEventListener("click", zmenNadpis)
+            function zmenNadpis() {
+                let textInputu = input.value
+                if (input === "liška") {
+                    podnadpis.innerText = "What does the fox say"
+                } else if (input.value === "želva") {
+                    podnadpis.innerText = "I like turtles"
+                } else if (input.value === "plameňák") {
+                    podnadpis.innerText = "🦩"
+                } else {
+                    podnadpis.innerText = "Toto zvíře neznám"
+                }
+            }
+        </script>
+    </body>
+</html>

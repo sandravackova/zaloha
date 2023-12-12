@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak jsem se měla o prázdninách aneb deník nadšené studentky</title>
+    
+</head>
+
+<body>
+    <body>
+        <div class="stred">
+            <h1 id="nadpis">Jak jsem se měla o prázdninách aneb deník nadšené studentky</h1>
+            <h2 id="podnadpis">Lorem ipsum dolor sit amet.</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Temporibus hic accusantium veritatis asperiores voluptas ullam! <br>
+                Fuga voluptatem est temporibus voluptates.<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Quod necessitatibus itaque quis labore aperiam. <br>
+                Dignissimos ea impedit atque ut quod, est, pariatur, esse at veniam quas voluptas harum sit. Eaque.
+            </p> <br>
+            <img src="obrazek.jpg" alt="" id="obr1" /><br><br>
+            <button id="tlacitko">Změň</button>
+        </div>
+
+        <style>
+                @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+            *{
+                font-family: 'Caveat', cursive;
+            }
+
+            .stred{
+                text-align: center;
+            }
+        </style>
+
+        <script>
+            let tlacitko = document.querySelector("#tlacitko")
+            let podnadpis = document.querySelector("#podnadpis")
+            let nadpis = document.querySelector("#nadpis")
+            obr1 = document.querySelector("#obr1")
+            
+            tlacitko.addEventListener("click", klik)
+            function klik() {
+                body.style.backgroundColor = "blue"
+            }
+
+            
+        </script>    
+</body>
+
+</html>

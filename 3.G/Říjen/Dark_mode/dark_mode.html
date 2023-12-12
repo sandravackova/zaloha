@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Přepnutí dark mode</title>
+</head>
+
+<body>
+    <div class="prvni">
+        <h1 id="nadpis">Světlý režim</h1>
+        <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo rem eius harum<br> cupiditate fuga magnam beatae tempora nobis assumenda recusandae?</p>
+        <button id="tlacitko">Líné, nic nedělající tlačítko </button>
+        <img src="mesicek.png" alt="" id="mesicek"/>
+    </div>
+
+    <div class="druhy">
+        <h1 id="nadpis1">Tmavý režim</h1>
+        <p id="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut rerum modi<br> eius minus placeat distinctio. Modi iusto eius eveniet doloremque!</p>
+        <button id="tlacitko1">Líné, nic nedělající tlačítko</button>
+        <img src="slunicko.jpg" alt="" id="slunicko"/>
+    </div>
+
+    <style>
+        .prvni {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .druhy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            display: none;
+        }
+
+        #nadpis {
+            color:#743C2F;
+            font-family: 'Sacramento', cursive;        
+        }
+
+        #nadpis1 {
+            color: white;
+            font-family: 'Sacramento', cursive;        
+        }
+        
+        #text {
+            color: #172A3A;
+            font-family: 'DM Serif Display', serif;
+        }
+
+        #text1 {
+            color: white;
+            font-family: 'DM Serif Display', serif;
+        }
+        
+        body {
+            background-color: #FEEFE5;
+        }
+
+        #slunicko {
+            width: 60px;
+            height: 50px;
+            position: absolute;
+            top: 3%;
+            left: 30.5%;
+        }
+        
+        #mesicek {
+            width: 50px;
+            height: 40px;
+            position: absolute;
+            top: 3%;
+            left: 30%;
+        }
+
+        #tlacitko {
+            color: #FEEFE5;
+            background-color: #743C2F;
+            border: 2px solid #172A3A;
+        }
+        
+        #tlacitko1 {
+            color: black;
+            background-color: white;
+            border: 2px solid black;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+    </style>
+
+    <script>
+        let mesicek = document.querySelector("#mesicek")
+        let slunicko = document.querySelector("#slunicko")
+        let prvni = document.querySelector(".prvni")
+        let druhy = document.querySelector(".druhy")
+        let body = document.querySelector("body")
+
+        mesicek.addEventListener("click", zmenit)
+            function zmenit() {
+                druhy.style.display = "flex"
+                prvni.style.display = "none"     
+            }
+
+        slunicko.addEventListener("click", zpet)
+            function zpet() {
+                druhy.style.display = "none"
+                prvni.style.display = "flex"
+        }
+        
+        body.addEventListener("click", barva)
+            function barva(){
+                if (druhy.style.display === "flex") {
+                    body.style.backgroundColor = "black"
+                } else{
+                    body.style.backgroundColor = "#FEEFE5"
+                }
+            }
+
+    </script>
+
+</body>
+</html>
