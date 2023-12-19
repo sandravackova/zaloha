@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Skákací koule</title>
+        <style>
+            .hlavni {
+                display: flex;
+                flex-direction: row;
+                height: 800px;
+                width: 1000px;
+                border: 2px solid black;
+                margin-top: 30px;
+                margin-left: 450px;
+            }
+            .koule1 {
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+                background-color: green;
+                border-radius: 50%;
+                animation: pohyb 3s ease-in forwards infinite alternate;
+            }
+
+            .koule2 {
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+                background-color: thistle;
+                border-radius: 50%;
+                animation: pohyb 3s ease-in forwards infinite alternate;
+            }
+
+            .koule3 {
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+                background-color: powderblue;
+                border-radius: 50%;
+                animation: pohyb 3s ease-in forwards infinite alternate;
+            }
+
+            .koule4 {
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+                background-color: plum;
+                border-radius: 50%;
+                animation: pohyb 3s ease-in forwards infinite alternate;
+            }
+
+            .koule5 {
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+                background-color: blanchedalmond;
+                border-radius: 50%;
+                animation: pohyb 3s ease-in forwards infinite alternate;
+            }
+
+            @keyframes pohyb {
+                20% {
+                    translate: 0px 0px;
+                }
+
+                100% {
+                    translate: 0px 740px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="hlavni">
+            <div class="koule1"></div>
+            <div class="koule2"></div>
+            <div class="koule3"></div>
+            <div class="koule4"></div>
+            <div class="koule5"></div>
+        </div>
+    </body>
+</html>
