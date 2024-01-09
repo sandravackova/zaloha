@@ -10,7 +10,7 @@
                 flex-direction: row;
                 height: 800px;
                 width: 1000px;
-                border: 2px solid black;
+                /* border: 2px solid black; */
                 margin-top: 30px;
                 margin-left: 450px;
             }
@@ -20,7 +20,8 @@
                 display: inline-block;
                 background-color: green;
                 border-radius: 50%;
-                animation: pohyb 3s ease-in forwards infinite alternate;
+                animation: pohyb 3s ease-in-out forwards infinite alternate;
+                margin: 0 10px;
             }
 
             .koule2 {
@@ -29,7 +30,8 @@
                 display: inline-block;
                 background-color: thistle;
                 border-radius: 50%;
-                animation: pohyb 3s ease-in forwards infinite alternate;
+                animation: pohyb 4s ease-in-out forwards infinite alternate;
+                margin: 0 10px;
             }
 
             .koule3 {
@@ -38,7 +40,8 @@
                 display: inline-block;
                 background-color: powderblue;
                 border-radius: 50%;
-                animation: pohyb 3s ease-in forwards infinite alternate;
+                animation: pohyb 5s ease-in-out forwards infinite alternate;
+                margin: 0 10px;
             }
 
             .koule4 {
@@ -47,7 +50,8 @@
                 display: inline-block;
                 background-color: plum;
                 border-radius: 50%;
-                animation: pohyb 3s ease-in forwards infinite alternate;
+                animation: pohyb 6s ease-in-out forwards infinite alternate;
+                margin: 0 10px;
             }
 
             .koule5 {
@@ -56,14 +60,11 @@
                 display: inline-block;
                 background-color: blanchedalmond;
                 border-radius: 50%;
-                animation: pohyb 3s ease-in forwards infinite alternate;
+                animation: pohyb 7s ease-in-out forwards infinite alternate;
+                margin: 0 10px;
             }
 
             @keyframes pohyb {
-                20% {
-                    translate: 0px 0px;
-                }
-
                 100% {
                     translate: 0px 740px;
                 }
