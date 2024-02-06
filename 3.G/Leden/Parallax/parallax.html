@@ -5,9 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Parallax</title>
         <style>
+            @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&display=swap");
             * {
                 margin: 0;
             }
+
+            .heading {
+                color: white;
+                position: absolute;
+                text-align: center;
+                left: 50%;
+                transform: translateX(-50%);
+                font-family: "Dancing Script", cursive;
+                z-index: 6;
+                top: 20%;
+                font-size: 6rem;
+                --slide-speed: 32;
+            }
+
             .parallax {
                 position: relative;
                 min-height: 100vh;
@@ -18,8 +33,6 @@
             .parallax img {
                 position: absolute;
                 width: 100%;
-                animation: slide-down linear;
-                animation-timeline: scroll(root);
             }
 
             .sky {
@@ -39,18 +52,33 @@
 
             .clouds1 {
                 z-index: 2;
-                --slide-speed: 50;
+                --slide-speed: -10;
             }
 
             .clouds2 {
                 z-index: 5;
-                --slide-speed: 40;
+                --slide-speed: 10;
+            }
+
+            .clouds1,
+            .clouds2 {
+                animation: slide-sideways linear;
+                animation-timeline: scroll(root);
+            }
+
+            .rocks,
+            .ground,
+            .sky,
+            .heading {
+                animation: slide-down linear;
+                animation-timeline: scroll(root);
             }
 
             section p {
                 width: 75ch;
                 text-align: justify;
                 margin-inline: auto;
+                color: white;
             }
 
             section {
@@ -58,6 +86,19 @@
                 padding-top: 250px;
                 /* inline v levo a pravo budu stejne velke */
                 /* block nahopre, dole stejne velke */
+                background-image: linear-gradient(#064f7d, #0177b2, #9186a1);
+            }
+
+            .firefly {
+                height: 15px;
+                aspect-ratio: 1/1;
+                background-color: #fff3a1;
+                z-index: 99;
+                position: absolute;
+                translate: -50% -50%;
+                border-radius: 50%;
+                filter: blur(2px);
+                transition: 0.5s ease-out;
             }
 
             @keyframes slide-down {
@@ -65,11 +106,19 @@
                     translate: 0 calc(var(--slide-speed) * 30px);
                 }
             }
+
+            @keyframes slide-sideways {
+                100% {
+                    translate: calc(var(--slide-speed) * 30px) 0;
+                }
+            }
         </style>
     </head>
 
     <body>
+        <div class="firefly"></div>
         <div class="parallax">
+            <h1 class="heading">Hello there!</h1>
             <img src="sky.png" alt="" class="sky" />
             <img src="rocks.png" alt="" class="rocks" />
             <img src="ground.png" alt="" class="ground" />
@@ -150,5 +199,30 @@
                 </p>
             </section>
         </div>
+
+        <script>
+            let firefly = document.querySelector(".firefly")
+
+            let mouseX = 0
+            let mouseY = 0
+
+            document.addEventListener("mousemove", function (event) {
+                mouseX = event.clientX
+                mouseY = event.clientY
+                flyfirefly()
+            })
+
+            window.addEventListener("scroll", function () {
+                flyfirefly()
+            })
+
+            function flyfirefly() {
+                let scrollX = window.pageXOffset
+                let scrollY = window.pageYOffset
+
+                firefly.style.left = mouseX + scrollX + "px"
+                firefly.style.top = mouseY + scrollY + "px"
+            }
+        </script>
     </body>
 </html>
